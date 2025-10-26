@@ -20,7 +20,7 @@
 
     function setDisconnectUser(){
          unset($_SESSION['User']);
-         sessions_destroy();
+         session_destroy();
     }
 
     function isConnected(){
@@ -36,24 +36,25 @@
         $fichier = TL_ROOT.'/pages/'.(is_null($page) ? 'index.php' : $page.'.php');
 
         if(!file_exists($fichier)){
-            inclde TL_ROOT.'/pages/index.php';
+            include TL_ROOT.'/pages/index.php';
+            // il manquer ici le "u" a la fonction include
         }else{
             include $fichier;
         }
     }
 
     function getArticlesFromJson(){
-        if(file_exist(DB_ARTICLE)) {
-            $contenu_json = file_get_contents(DB_ARTICLE);
+        if(file_exists(DB_ARTICLES)) { // il manquait ici un "s" a file_exists et un "s" a DB_ARTICLES (egalement corriger tout les endroit ou cette constante est utilisee)
+            $contenu_json = file_get_contents(DB_ARTICLES); 
             return json_decode($contenu_json, true);
         }
 
         return null;
     }
 
-    function getArticleById($id_article == null){
-       if(file_exists(DB_ARTICLE)) {
-            $contenu_json = file_get_contents(DB_ARTICLE);
+    function getArticleById($id_article = null){ // on a essaye ici de faire un == au lieu d'un = afin d'affecter une valeur par defaut a id_article
+       if(file_exists(DB_ARTICLES)) {
+            $contenu_json = file_get_contents(DB_ARTICLES);
             $_articles    = json_decode($contenu_json, true);
 
             foreach($_articles as $article){
