@@ -1,4 +1,5 @@
-<?php include 'inc/inc.functions.php'; ?> <!-- il manque ici un "e" a la fonction include -->
+<!-- On utilise "include_once" au lieu de "include" pour eviter les doublons -->
+<?php include_once 'inc/inc.functions.php'; ?> <!-- il manquait ici un 'e' a la fonction "include" -->
 <!DOCTYPE HTML>
 <!--
 	Story by HTML5 UP
@@ -11,7 +12,7 @@
 	<title>Story by HTML5 UP</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<?php include 'inc/inc.css.php'; ?>
+	<?php include_once 'inc/inc.css.php'; ?>
 </head>
 
 <body class="is-preload">
@@ -19,14 +20,14 @@
 	<!-- Wrapper -->
 	<div id="wrapper" class="divided">
 		<?php
-		getPageTemplate( // il y avais ici un s de trop au nom de la fonction
-			array_key_exists('page', $_GET) ? $_GET['page'] : null // il manquait ici un s a la fonction array_key_exists
+		getPageTemplate( // il y avait ici un s de trop au nom de la fonction
+			array_key_exists('page', $_GET) ? $_GET['page'] : null // il manquait ici un 's' a la fonction "array_key_exists"
 		);
 		?>
-		<?php include 'inc/tpl-footer.php'; ?> <!-- le fichier tpl-footer.php avait ici un s en trop -->
+		<?php include_once 'inc/tpl-footer.php'; ?> <!-- le fichier tpl-footer.php avait ici un s en trop -->
 	</div>
 
-	<?php include 'inc/inc.js.php'; ?> <!-- il y a ici un s en plus dans la fonction -->
+	<?php include_once 'inc/inc.js.php'; ?> <!-- il y avait ici un 's' en plus dans la fonction -->
 
 </body>
 
