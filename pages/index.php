@@ -4,7 +4,7 @@
 		<h1>Mon [ blog ].</h1>
 		<p class="major">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur porta tellus, quis auctor ante pulvinar non. Quisque aliquet lacus posuere purus vestibulum, eget rutrum turpis scelerisque.</p>
 		<ul class="actions stacked">
-			<li><a href="#first" class="button big wide smooth-scroll-middle">Consulter mes articles</a></li>
+			<li><a href="#article-1" class="button big wide smooth-scroll-middle">Consulter mes articles</a></li>
 		</ul>
 	</div>
 	<div class="image">
