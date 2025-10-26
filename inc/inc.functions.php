@@ -36,10 +36,10 @@
         $fichier = TL_ROOT.'/pages/'.(is_null($page) ? 'index.php' : $page.'.php');
 
         if(!file_exists($fichier)){
-            include TL_ROOT.'/pages/index.php';
+            include_once TL_ROOT.'/pages/index.php';
             // il manquer ici le "u" a la fonction include
         }else{
-            include $fichier;
+            include_once $fichier;
         }
     }
 
