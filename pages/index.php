@@ -4,7 +4,7 @@
 		<h1>Mon [ blog ].</h1>
 		<p class="major">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur porta tellus, quis auctor ante pulvinar non. Quisque aliquet lacus posuere purus vestibulum, eget rutrum turpis scelerisque.</p>
 		<ul class="actions stacked">
-			<li><a href="#first" class="button big wide smooth-scroll-middle">Consulter mes articles</a></li>
+			<li><a href="#article-1" class="button big wide smooth-scroll-middle">Consulter mes articles</a></li>
 		</ul>
 	</div>
 	<div class="image">
@@ -29,7 +29,7 @@
 			$classCss = ($compteur % 2 == 0 ? 'left' : 'right');
 			$compteur++; // Incrémentation du compteur pour l'article suivant
 			?>
-				<section class="spotlight style1 orient-<?php echo $classCss;?>  content-align-left image-position-center onscroll-image-fade-in" id="first">
+				<section class="spotlight style1 orient-<?php echo $classCss;?>  content-align-left image-position-center onscroll-image-fade-in" id="article-<?php echo $article['id'];?>">
 					<div class="content">
 						<h2><?php echo $article['titre'];?></h2>  <!-- Affichage du titre -->
 						<p><?php echo $article['texte'];?></p> <!-- Affichage du contenu texte -->
