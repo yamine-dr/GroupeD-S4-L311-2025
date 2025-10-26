@@ -24,7 +24,7 @@ try {
     error_log("ERREUR déconnexion : " . $e->getMessage());
     
     // Redirection de secours vers VOTRE accueil
-    header('Location: /L311/GroupeD-S4-L311-2025/index.php');
+    header('Location: ../index.php');
     exit();
 }
 ?>
