@@ -16,7 +16,7 @@ try {
     error_log("Déconnexion réussie");
     
     // Redirection vers VOTRE page d'accueil
-    header('Location: /L311/GroupeD-S4-L311-2025/index.php');
+    header('Location: ../index.php');
     exit();
     
 } catch (Exception $e) {
