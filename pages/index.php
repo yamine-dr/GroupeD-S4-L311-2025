@@ -29,7 +29,7 @@
 			$classCss = ($compteur % 2 == 0 ? 'left' : 'right');
 			$compteur++; // Incrémentation du compteur pour l'article suivant
 			?>
-				<section class="spotlight style1 orient-<?php echo $classCss;?>  content-align-left image-position-center onscroll-image-fade-in" id="first">
+				<section class="spotlight style1 orient-<?php echo $classCss;?>  content-align-left image-position-center onscroll-image-fade-in" id="article-<?php echo $article['id'];?>">
 					<div class="content">
 						<h2><?php echo $article['titre'];?></h2>  <!-- Affichage du titre -->
 						<p><?php echo $article['texte'];?></p> <!-- Affichage du contenu texte -->
