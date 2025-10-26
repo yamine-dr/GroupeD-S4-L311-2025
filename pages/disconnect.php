@@ -1,10 +1,4 @@
 <?php
-	setDisconnectUser();
-
-	header('Location:index.php');
-?>
-
-<?php
 // Début du bloc try-catch pour la gestion des erreurs
 try {
     // Vérification que la fonction de déconnexion existe
@@ -21,16 +15,16 @@ try {
     // Journalisation de la réussite de la déconnexion
     error_log("Déconnexion réussie");
     
-    // Redirection vers la page d'accueil après déconnexion
-    header('Location: ../index.php');
-    exit();  // Arrêt de l'exécution du script
+    // Redirection vers VOTRE page d'accueil
+    header('Location: /L311/GroupeD-S4-L311-2025/index.php');
+    exit();
     
 } catch (Exception $e) {
     // Gestion des erreurs - journalisation du problème
     error_log("ERREUR déconnexion : " . $e->getMessage());
     
-    // Redirection de secours vers l'accueil même en cas d'erreur
-    header('Location: ../index.php');
-    exit();  // Arrêt de l'exécution du script
+    // Redirection de secours vers VOTRE accueil
+    header('Location: /L311/GroupeD-S4-L311-2025/index.php');
+    exit();
 }
 ?>
